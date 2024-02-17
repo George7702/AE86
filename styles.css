@@ -29,10 +29,10 @@ body{
   position: sticky;
   top:0;
   background: rgba(0, 0, 0, 0);
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.016);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
-  border: 1px solid rgba(12, 12, 12, 0.11);
+  border: 1px solid rgba(12, 12, 12, 0.203);
   padding: 5px 10px;
   flex-flow: row wrap;
   text-align: center;
@@ -71,12 +71,13 @@ body{
   position: relative;
   display: flex;
   padding: 0px 150px;
-    height: 100vh;
+    height: 45vw;
   background-position: center;
   text-align: center;
   align-items: center;
   justify-content: center;
-  overflow:hidden;
+  overflow-x: clip;
+  overflow-y: visible;
   background-color: black ;
 
 }
@@ -88,8 +89,7 @@ body{
   width: 100vw;
   z-index: 1; 
   filter: opacity(50%);
-
-}
+ }
 
 
 #ttext{
@@ -108,14 +108,15 @@ body{
 #home {
   position: relative;
   display: flex;
-  height: 100vh;
-  padding: 10vw;
-  width: 100%;
-  margin: 0px;
+  height: 50vw;
+  padding: 1vw 5vw ;
+  margin-bottom: 1vw;
   z-index: 3;
   align-items: center;
-  background-color: #252525;
-  background-image: url(./pic/titlebg2.jpg);
+  text-align: center;
+  justify-content: center;
+  background-color: #25252500;
+  /* background-image: url(./pic/titlebg2.jpg); */
   background-size: cover;
   box-shadow: 10px 20x 1px black;
 
@@ -124,8 +125,8 @@ body{
 
 
 #hometext{
-  padding: 10vw;
-  width: 80%;
+  padding: 7vw;
+  width: 60vw;
   background-color: #5e5c5c67;
   border-radius: 10px;
 
@@ -300,16 +301,17 @@ flex-flow: row wrap;
    
   #title>video{
     top: -70vw;
-    transition: 1.5s linear;
+    transition: .5s linear;
      }
 
      #ttext{
       font-size: 6vw;
-      transition: 1s linear;
+      transition: .5s linear;
     }
     #home{
       justify-content: center;
       padding: 2px;
+      margin-bottom: 12vw;
     }
     #hometext{
       width: 50vw;
@@ -332,19 +334,22 @@ flex-flow: row wrap;
 @media screen and (max-width: 600px) {
   #title>video{
    top: -40vw;
-   transition: 1.5s linear;
+   transition: .5s linear;
   }
   #ttext{
     font-size: 6vh;
     top: 10vw;
-    transition: 1s linear;
+    transition: .5s linear;
   }
   #home{
     justify-content: center;
-    padding: 2px;
+    align-items: center;
+    padding: 1vw;
+    margin-top: 25vw ;
+    margin-bottom: 16vw;
   }
   #hometext{
-    width: 50vw;
+    width: 45vw;
   }
   #htext{
     font-size: 3vw;

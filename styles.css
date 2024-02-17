@@ -155,9 +155,9 @@ body{
 #car>h1{
   color: white;
   position: absolute;
-  font-size: 25vw;
+  font-size: 23vw;
   font-family: "Bebas Neue",sans-serif;
-  bottom: 10vw;
+  bottom: 13vw;
   left: 13vw;
   letter-spacing: 40px;
   z-index: 1;
@@ -218,9 +218,13 @@ flex-flow: row wrap;
   margin-bottom:0;
 }
 
+#ep2{
+  display: none;
+}
+
 #texte>p{
   font-family: "Roboto Condensed",sans-serif;
-  width: 90vw;
+  width: 80vw;
 }
 
 #gallery{
@@ -332,6 +336,15 @@ flex-flow: row wrap;
     left: 18vw;
     bottom: 20vw;
     letter-spacing: 5vw;
+  }
+
+  #ep1{
+    display: none;
+    transition: .5s linear;
+  }
+  #ep2{
+    display: block;
+     transition: .5s linear;
   }
   
   .row{

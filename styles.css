@@ -115,7 +115,7 @@ body{
   z-index: 3;
   align-items: center;
   background-color: #252525;
-  background-image: url(/pic/titlebg2.jpg);
+  background-image: url(./pic/titlebg2.jpg);
   background-size: cover;
   box-shadow: 10px 20x 1px black;
 

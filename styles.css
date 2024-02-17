@@ -272,7 +272,28 @@ flex-flow: row wrap;
 .row2{
   display: none;
 }
-
+#timeline{
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  flex-flow: row wrap;
+  background-color: white;
+}
+#ttitle{
+  font-family: "Bebas Neue",sans-serif;
+  font-size: 3vw;
+}
+.tcontainer{
+  display: flex;
+}
+.tg  {border-collapse:collapse;border-spacing:0;}
+.tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  overflow:hidden;padding:20px 20px;word-break:normal;}
+.tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  font-weight:normal;overflow:hidden;padding:20px 20px;word-break:normal;}
+.tg .tg-6qw1{background-color:#c0c0c0;text-align:center;vertical-align:top}
+.tg .tg-y6fn{background-color:#c0c0c0;text-align:left;vertical-align:top}
 
 @media screen and (max-width: 800px) {
    

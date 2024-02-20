@@ -103,3 +103,25 @@ const initSlider = () => {
 
 window.addEventListener("resize", initSlider);
 window.addEventListener("load", initSlider);
+
+document.addEventListener("DOMContentLoaded", function() {
+  const carouselSlide = document.querySelector(".carousel-slide");
+  const carouselItems = document.querySelectorAll(".carousel-item");
+  const prevBtn = document.querySelector(".prev-btn");
+  const nextBtn = document.querySelector(".next-btn");
+
+  let counter = 0;
+  const itemWidth = carouselItems[0].clientWidth;
+
+  nextBtn.addEventListener("click", () => {
+      if (counter >= carouselItems.length - 1) return;
+      counter++;
+      carouselSlide.style.transform = `translateX(-${counter * itemWidth}px)`;
+  });
+
+  prevBtn.addEventListener("click", () => {
+      if (counter <= 0) return;
+      counter--;
+      carouselSlide.style.transform = `translateX(-${counter * itemWidth}px)`;
+  });
+});

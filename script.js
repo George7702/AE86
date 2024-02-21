@@ -20,29 +20,6 @@ function myFunction() {
   }
 }
 
-let slideIndex = 1;
-showSlides(slideIndex);
-
-
-function plusSlides(n) {
-  showSlides(slideIndex += n);
-}
-
-function currentSlide(n) {
-  showSlides(slideIndex = n);
-}
-
-function showSlides(n) {
-  let i;
-  let slides = document.getElementsByClassName("mySlides");
-  if (n > slides.length) {slideIndex = 1}
-  if (n < 1) {slideIndex = slides.length}
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
-  }
-  slides[slideIndex-1].style.display = "block";
-}
-
 const initSlider = () => {
   const imageList = document.querySelector(".slider-wrapper .image-list");
   const slideButtons = document.querySelectorAll(".slider-wrapper .slide-button");
@@ -103,25 +80,3 @@ const initSlider = () => {
 
 window.addEventListener("resize", initSlider);
 window.addEventListener("load", initSlider);
-
-document.addEventListener("DOMContentLoaded", function() {
-  const carouselSlide = document.querySelector(".carousel-slide");
-  const carouselItems = document.querySelectorAll(".carousel-item");
-  const prevBtn = document.querySelector(".prev-btn");
-  const nextBtn = document.querySelector(".next-btn");
-
-  let counter = 0;
-  const itemWidth = carouselItems[0].clientWidth;
-
-  nextBtn.addEventListener("click", () => {
-      if (counter >= carouselItems.length - 1) return;
-      counter++;
-      carouselSlide.style.transform = `translateX(-${counter * itemWidth}px)`;
-  });
-
-  prevBtn.addEventListener("click", () => {
-      if (counter <= 0) return;
-      counter--;
-      carouselSlide.style.transform = `translateX(-${counter * itemWidth}px)`;
-  });
-});
